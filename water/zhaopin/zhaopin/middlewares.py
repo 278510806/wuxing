@@ -81,6 +81,8 @@ class ZhaopinDownloaderMiddleware(object):
         return None
 
     def process_response(self, request, response, spider):
+        print("::::::::::::::::::::::::::::::::::::::::",response.status)
+
         # Called with the response returned from the downloader.
 
         # Must either;
