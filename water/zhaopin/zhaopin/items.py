@@ -16,3 +16,8 @@ class ZhaopinItem(scrapy.Item):
     yuexin=scrapy.Field()
     gongzuodidian=scrapy.Field()
     faburiqi=scrapy.Field()
+    gongzuojingyan=scrapy.Field()
+    xueli=scrapy.Field()
+    gongsiguimo=scrapy.Field()
+    gongsixingzhi=scrapy.Field()
+    location=scrapy.Field()
