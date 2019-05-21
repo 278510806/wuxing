@@ -6,7 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+import scrapy
 
 class ZhaopinSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -81,8 +81,6 @@ class ZhaopinDownloaderMiddleware(object):
         return None
 
     def process_response(self, request, response, spider):
-        print("::::::::::::::::::::::::::::::::::::::::",response.status)
-
         # Called with the response returned from the downloader.
 
         # Must either;

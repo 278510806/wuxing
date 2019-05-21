@@ -22,8 +22,9 @@ class RecruitSpider(scrapy.Spider):
 
     def start_requests(self):
         for url in self.start_urls:
-            yield scrapy.Request(url, callback=self.parse)
-
+            yield scrapy.Request(url, callback=self.parse,errback=self.parse_error)
+    def parse_error(self,response):
+        print("::::::::::::::::::::::::",response.status)
     def parse(self, response):
         # notfound = response.xpath("//div[@class='returnpage']/h1/text()")
         # print("notfound", notfound)
